@@ -1,0 +1,177 @@
+@import 'constants';
+@import 'mixins';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: $red;
+}
+
+::-moz-selection {
+  background: $red;
+}
+
+html,
+body {
+  background: #303030;
+  font: 16px/18px $fonts;
+  height: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1 {
+  line-height: 2em;
+  font-size: 3em;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+h3 {
+  line-height: 1.2em;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+#people {
+  color: #fff;
+  display: block;
+  height: 75%;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  margin-top: 2em;
+  margin-left: -40%;
+
+  & > section {
+    @include transition(width 0.3s);
+    cursor: pointer;
+    float: left;
+    height: 100%;
+    width: 25%;
+
+    &::before {
+      @include transition(all 0.3s);
+      content: ' ';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 25%;
+    }
+
+    &.active {
+      width: 40%;
+
+      &::before {
+        width: 40%;
+      }
+
+      aside {
+        opacity: 1;
+      }
+    }
+
+    &.inactive {
+      width: 20%;
+
+      &::before {
+        width: 20%;
+      }
+    }
+
+    aside {
+      @include transition(all 0.3s);
+      opacity: 0;
+    }
+  }
+
+  #spencer {
+
+    &::before {
+      background-color: rgba(51,151,251,.45);
+      left: 0;
+    }
+
+    &:hover {
+      &::before {
+        background-color: rgba(51,151,50,.45);
+      }
+    }
+  }
+
+  #eugene {
+
+    &::before {
+      background-color: rgba(51,151,50,.45);
+      left: 25%;
+    }
+
+    &.active::before {
+      left: 20%;
+    }
+
+    &.inactive::before {
+      left: 40%;
+    }
+  }
+
+  #jon {
+
+    &::before {
+      background-color: rgba(51,151,251,.45);
+      left: 50%;
+    }
+
+    &:hover {
+      &::before {
+        background-color: rgba(51,151,50,.45);
+      }
+    }
+  }
+
+  #nick {
+
+    &::before {
+      background-color: rgba(51,151,50,.45);
+      left: 75%;
+    }
+
+    &.active::before {
+      left: 20%;
+    }
+
+    &.inactive::before {
+      left: 40%;
+    }
+  }
+}
+
+nav {
+  position: fixed;
+  bottom: 2em;
+  left: 50%;
+  margin-left: -12em;
+  width: 24em;
+
+  ul {
+    li {
+      float: left;
+      list-style: none;
+      text-align: center;
+      width: 8em;
+    }
+  }
+}

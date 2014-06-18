@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+::selection {
+  background: #ff4e50; }
+
+::-moz-selection {
+  background: #ff4e50; }
+
+html,
+body {
+  background: #303030;
+  font: 16px/18px "Raleway", "Helvetica Neue", "Helvetica" sans-serif;
+  height: 100%; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+h1 {
+  line-height: 2em;
+  font-size: 3em;
+  font-weight: 300; }
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 300; }
+
+h3 {
+  line-height: 1.2em;
+  font-size: 2em;
+  font-weight: 300; }
+
+#people {
+  color: #fff;
+  display: block;
+  height: 75%;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  margin-top: 2em;
+  margin-left: -40%; }
+  #people > section {
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    -ms-transition: width 0.3s;
+    -o-transition: width 0.3s;
+    transition: width 0.3s;
+    cursor: pointer;
+    float: left;
+    height: 100%;
+    width: 25%; }
+    #people > section::before {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      content: ' ';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 25%; }
+    #people > section.active {
+      width: 40%; }
+      #people > section.active::before {
+        width: 40%; }
+      #people > section.active aside {
+        opacity: 1; }
+    #people > section.inactive {
+      width: 20%; }
+      #people > section.inactive::before {
+        width: 20%; }
+    #people > section aside {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      opacity: 0; }
+  #people #spencer::before {
+    background-color: rgba(51, 151, 251, 0.45);
+    left: 0; }
+  #people #spencer:hover::before {
+    background-color: rgba(51, 151, 50, 0.45); }
+  #people #eugene::before {
+    background-color: rgba(51, 151, 50, 0.45);
+    left: 25%; }
+  #people #eugene.active::before {
+    left: 20%; }
+  #people #eugene.inactive::before {
+    left: 40%; }
+  #people #jon::before {
+    background-color: rgba(51, 151, 251, 0.45);
+    left: 50%; }
+  #people #jon:hover::before {
+    background-color: rgba(51, 151, 50, 0.45); }
+  #people #nick::before {
+    background-color: rgba(51, 151, 50, 0.45);
+    left: 75%; }
+  #people #nick.active::before {
+    left: 20%; }
+  #people #nick.inactive::before {
+    left: 40%; }
+
+nav {
+  position: fixed;
+  bottom: 2em;
+  left: 50%;
+  margin-left: -12em;
+  width: 24em; }
+  nav ul li {
+    float: left;
+    list-style: none;
+    text-align: center;
+    width: 8em; }
