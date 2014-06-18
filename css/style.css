@@ -34,11 +34,12 @@ h2 {
   color: #fff;
   display: block;
   height: 75%;
-  width: 80%;
-  position: absolute;
   left: 50%;
+  margin-left: -40%;
   margin-top: 2em;
-  margin-left: -40%; }
+  overflow: hidden;
+  position: absolute;
+  width: 80%; }
   #people > section {
     -webkit-transition: width 0.3s;
     -moz-transition: width 0.3s;
@@ -50,11 +51,11 @@ h2 {
     height: 100%;
     width: 25%; }
     #people > section .overlay {
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      -ms-transition: all 0.3s;
-      -o-transition: all 0.3s;
-      transition: all 0.3s;
+      -webkit-transition: width 0.3s, background-color 0.3s;
+      -moz-transition: width 0.3s, background-color 0.3s;
+      -ms-transition: width 0.3s, background-color 0.3s;
+      -o-transition: width 0.3s, background-color 0.3s;
+      transition: width 0.3s, background-color 0.3s;
       height: 100%;
       float: left;
       width: 100%; }
@@ -65,24 +66,33 @@ h2 {
     #people > section.inactive {
       width: 20%; }
     #people > section aside {
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      -ms-transition: all 0.3s;
-      -o-transition: all 0.3s;
-      transition: all 0.3s;
+      -webkit-transition: opacity 0.3s;
+      -moz-transition: opacity 0.3s;
+      -ms-transition: opacity 0.3s;
+      -o-transition: opacity 0.3s;
+      transition: opacity 0.3s;
       opacity: 0;
       padding: 1em;
       position: absolute;
-      top: 0; }
+      top: 0;
+      width: 40%; }
   #people #spencer .overlay {
     background-color: rgba(223, 47, 51, 0.45);
     left: 0; }
+  #people #spencer:hover .overlay {
+    background-color: rgba(223, 47, 51, 0.55); }
   #people #eugene .overlay {
     background-color: rgba(51, 151, 50, 0.45); }
+  #people #eugene:hover .overlay {
+    background-color: rgba(51, 151, 50, 0.55); }
   #people #jon .overlay {
     background-color: rgba(43, 136, 230, 0.45); }
+  #people #jon:hover .overlay {
+    background-color: rgba(43, 136, 230, 0.55); }
   #people #nick .overlay {
     background-color: rgba(155, 108, 213, 0.45); }
+  #people #nick:hover .overlay {
+    background-color: rgba(155, 108, 213, 0.55); }
 
 nav {
   position: fixed;

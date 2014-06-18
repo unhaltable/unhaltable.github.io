@@ -44,11 +44,12 @@ h2 {
   color: #fff;
   display: block;
   height: 75%;
-  width: 80%;
-  position: absolute;
   left: 50%;
-  margin-top: 2em;
   margin-left: -40%;
+  margin-top: 2em;
+  overflow: hidden;
+  position: absolute;
+  width: 80%;
 
   & > section {
     @include transition(width 0.3s);
@@ -58,7 +59,7 @@ h2 {
     width: 25%;
 
     .overlay {
-      @include transition(all 0.3s);
+      @include transition(width 0.3s, background-color 0.3s);
       height: 100%;
       float: left;
       width: 100%;
@@ -77,11 +78,12 @@ h2 {
     }
 
     aside {
-      @include transition(all 0.3s);
+      @include transition(opacity 0.3s);
       opacity: 0;
       padding: 1em;
       position: absolute;
       top: 0;
+      width: 40%;
     }
   }
 
@@ -94,7 +96,7 @@ h2 {
 
     &:hover {
       .overlay {
-        // background-color: rgba(51,151,50,.45);
+        background-color: rgba(223,47,51,.55);
       }
     }
   }
@@ -103,6 +105,12 @@ h2 {
 
     .overlay {
       background-color: rgba(51,151,50,.45);
+    }
+
+    &:hover {
+      .overlay {
+        background-color: rgba(51,151,50,.55);
+      }
     }
   }
 
@@ -114,7 +122,7 @@ h2 {
 
     &:hover {
       .overlay {
-        // background-color: rgba(51,151,50,.45);
+        background-color: rgba(43,136,230,.55);
       }
     }
   }
@@ -123,6 +131,12 @@ h2 {
 
     .overlay {
       background-color: rgba(155,108,213,.45);
+    }
+
+    &:hover {
+      .overlay {
+        background-color: rgba(155,108,213,.55);
+      }
     }
   }
 }
