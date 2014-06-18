@@ -30,19 +30,13 @@ a {
 }
 
 h1 {
-  line-height: 2em;
-  font-size: 3em;
+  line-height: 1.5em;
+  font-size: 1.75em;
   font-weight: 300;
 }
 
 h2 {
   font-size: 1.5em;
-  font-weight: 300;
-}
-
-h3 {
-  line-height: 1.2em;
-  font-size: 2em;
   font-weight: 300;
 }
 
@@ -63,21 +57,15 @@ h3 {
     height: 100%;
     width: 25%;
 
-    &::before {
+    .overlay {
       @include transition(all 0.3s);
-      content: ' ';
       height: 100%;
-      position: absolute;
-      top: 0;
-      width: 25%;
+      float: left;
+      width: 100%;
     }
 
     &.active {
       width: 40%;
-
-      &::before {
-        width: 40%;
-      }
 
       aside {
         opacity: 1;
@@ -86,75 +74,55 @@ h3 {
 
     &.inactive {
       width: 20%;
-
-      &::before {
-        width: 20%;
-      }
     }
 
     aside {
       @include transition(all 0.3s);
       opacity: 0;
+      padding: 1em;
+      position: absolute;
+      top: 0;
     }
   }
 
   #spencer {
 
-    &::before {
-      background-color: rgba(51,151,251,.45);
+    .overlay {
+      background-color: rgba(223,47,51,.45);
       left: 0;
     }
 
     &:hover {
-      &::before {
-        background-color: rgba(51,151,50,.45);
+      .overlay {
+        // background-color: rgba(51,151,50,.45);
       }
     }
   }
 
   #eugene {
 
-    &::before {
+    .overlay {
       background-color: rgba(51,151,50,.45);
-      left: 25%;
-    }
-
-    &.active::before {
-      left: 20%;
-    }
-
-    &.inactive::before {
-      left: 40%;
     }
   }
 
   #jon {
 
-    &::before {
-      background-color: rgba(51,151,251,.45);
-      left: 50%;
+    .overlay {
+      background-color: rgba(43,136,230,.45);
     }
 
     &:hover {
-      &::before {
-        background-color: rgba(51,151,50,.45);
+      .overlay {
+        // background-color: rgba(51,151,50,.45);
       }
     }
   }
 
   #nick {
 
-    &::before {
-      background-color: rgba(51,151,50,.45);
-      left: 75%;
-    }
-
-    &.active::before {
-      left: 20%;
-    }
-
-    &.inactive::before {
-      left: 40%;
+    .overlay {
+      background-color: rgba(155,108,213,.45);
     }
   }
 }
