@@ -15,7 +15,8 @@ html,
 body {
   background: #303030;
   font: 16px/18px "Raleway", "Helvetica Neue", "Helvetica" sans-serif;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
 
 a {
   color: #fff;
@@ -30,17 +31,59 @@ h2 {
   font-size: 1.5em;
   font-weight: 300; }
 
-#people {
-  color: #fff;
+body > section {
+  -webkit-transition: transform 0.3s, opacity 0.3s;
+  -moz-transition: transform 0.3s, opacity 0.3s;
+  -ms-transition: transform 0.3s, opacity 0.3s;
+  -o-transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
   display: block;
   height: 75%;
   left: 50%;
-  margin-left: -40%;
+  margin-left: -50%;
   margin-top: 2em;
   overflow: hidden;
+  padding: 0 10%;
   position: absolute;
-  width: 80%; }
-  #people > section {
+  width: 100%; }
+
+section#about {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  background: #fff;
+  opacity: 0;
+  z-index: 100; }
+  section#about.active_section {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1; }
+
+section#projects {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  background: #fff;
+  opacity: 0;
+  z-index: 100; }
+  section#projects.active_section {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1; }
+
+section#home {
+  color: #fff; }
+  section#home > section {
     -webkit-transition: width 0.3s;
     -moz-transition: width 0.3s;
     -ms-transition: width 0.3s;
@@ -50,7 +93,7 @@ h2 {
     float: left;
     height: 100%;
     width: 25%; }
-    #people > section .overlay {
+    section#home > section .overlay {
       -webkit-transition: width 0.3s, background-color 0.3s;
       -moz-transition: width 0.3s, background-color 0.3s;
       -ms-transition: width 0.3s, background-color 0.3s;
@@ -59,13 +102,13 @@ h2 {
       height: 100%;
       float: left;
       width: 100%; }
-    #people > section.active {
+    section#home > section.active {
       width: 40%; }
-      #people > section.active aside {
+      section#home > section.active aside {
         opacity: 1; }
-    #people > section.inactive {
+    section#home > section.inactive {
       width: 20%; }
-    #people > section aside {
+    section#home > section aside {
       -webkit-transition: opacity 0.3s;
       -moz-transition: opacity 0.3s;
       -ms-transition: opacity 0.3s;
@@ -76,22 +119,22 @@ h2 {
       position: absolute;
       top: 0;
       width: 40%; }
-  #people #spencer .overlay {
+  section#home #spencer .overlay {
     background-color: rgba(223, 47, 51, 0.45);
     left: 0; }
-  #people #spencer:hover .overlay {
+  section#home #spencer:hover .overlay {
     background-color: rgba(223, 47, 51, 0.55); }
-  #people #eugene .overlay {
+  section#home #eugene .overlay {
     background-color: rgba(51, 151, 50, 0.45); }
-  #people #eugene:hover .overlay {
+  section#home #eugene:hover .overlay {
     background-color: rgba(51, 151, 50, 0.55); }
-  #people #jon .overlay {
+  section#home #jon .overlay {
     background-color: rgba(43, 136, 230, 0.45); }
-  #people #jon:hover .overlay {
+  section#home #jon:hover .overlay {
     background-color: rgba(43, 136, 230, 0.55); }
-  #people #nick .overlay {
+  section#home #nick .overlay {
     background-color: rgba(155, 108, 213, 0.45); }
-  #people #nick:hover .overlay {
+  section#home #nick:hover .overlay {
     background-color: rgba(155, 108, 213, 0.55); }
 
 nav {

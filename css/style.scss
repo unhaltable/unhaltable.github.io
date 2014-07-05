@@ -1,4 +1,4 @@
-@import 'constants';
+@import 'variables';
 @import 'mixins';
 
 *,
@@ -22,6 +22,7 @@ body {
   background: #303030;
   font: 16px/18px $fonts;
   height: 100%;
+  overflow: hidden;
 }
 
 a {
@@ -40,16 +41,45 @@ h2 {
   font-weight: 300;
 }
 
-#people {
-  color: #fff;
+body > section {
+  @include transition(transform 0.3s, opacity 0.3s);
   display: block;
   height: 75%;
   left: 50%;
-  margin-left: -40%;
+  margin-left: -50%;
   margin-top: 2em;
   overflow: hidden;
+  padding: 0 10%;
   position: absolute;
-  width: 80%;
+  width: 100%;
+}
+
+section#about {
+  @include transform(translateX(-100%));
+  background: #fff;
+  opacity: 0;
+  z-index: 100;
+
+  &.active_section {
+    @include transform(translateX(0%));
+    opacity: 1;
+  }
+}
+
+section#projects {
+  @include transform(translateX(100%));
+  background: #fff;
+  opacity: 0;
+  z-index: 100;
+
+  &.active_section {
+    @include transform(translateX(0%));
+    opacity: 1;
+  }
+}
+
+section#home {
+  color: #fff;
 
   & > section {
     @include transition(width 0.3s);

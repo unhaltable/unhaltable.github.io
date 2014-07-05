@@ -1,13 +1,5 @@
-// var scrollTo = function(el, off){
-//   $("html, body").animate({
-//     scrollTop: $(el).offset().top - off
-//   }, 650);
-// }
-
-// $("#more-button").click(function(){ scrollTo("#learn-more", 0); });
-
 /* Handle the expansion of the people panes. */
-var people = document.getElementById('people').children;
+var people = document.getElementById('home').children;
 
 for (var i = 0; i < people.length; i++) {
   people[i].onclick = function() {
@@ -17,7 +9,9 @@ for (var i = 0; i < people.length; i++) {
     if (this.classList.contains('active')) {
       // Revert to 25% widths for all panes
       this.classList.remove('active');
+
       for (var j = 0; j < people.length; j++) {
+        console.log(people[j]);
         people[j].classList.remove('inactive');
       }
     } else {
@@ -28,6 +22,7 @@ for (var i = 0; i < people.length; i++) {
 
       // Collapse others to 20% width
       for (var j = 0; j < people.length; j++) {
+        console.log(people[j]);
         people[j].classList.add('inactive');
       }
 
@@ -36,4 +31,51 @@ for (var i = 0; i < people.length; i++) {
       this.classList.add('active');
     }
   }
+}
+
+
+/* Handle the nav links. */
+var nav_about    = document.getElementById('nav_about');
+var nav_home     = document.getElementById('nav_home');
+var nav_projects = document.getElementById('nav_projects');
+
+var about    = document.getElementById('about');
+var home     = document.getElementById('home');
+var projects = document.getElementById('projects');
+
+function show_section(elem) {
+  switch (elem) {
+    case about:
+      home.classList.remove('active_section');
+      projects.classList.remove('active_section');
+      about.classList.add('active_section');
+      break;
+
+    case home:
+      about.classList.remove('active_section');
+      projects.classList.remove('active_section');
+      home.classList.add('active_section');
+      break;
+
+    case projects:
+      about.classList.remove('active_section');
+      home.classList.remove('active_section');
+      projects.classList.add('active_section');
+      break;
+
+    default:
+      break;
+  }
+}
+
+nav_about.onclick = function() {
+  show_section(about);
+}
+
+nav_home.onclick = function() {
+  show_section(home);
+}
+
+nav_projects.onclick = function() {
+  show_section(projects);
 }
