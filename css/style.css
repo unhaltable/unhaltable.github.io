@@ -6,15 +6,15 @@
   padding: 0; }
 
 ::selection {
-  background: #ff4e50; }
+  background: #fc913a; }
 
 ::-moz-selection {
-  background: #ff4e50; }
+  background: #fc913a; }
 
 html,
 body {
   background: #303030;
-  font: 16px/18px "Raleway", "Helvetica Neue", "Helvetica" sans-serif;
+  font: 16px/18px "Open Sans", "Helvetica Neue", "Helvetica" sans-serif;
   height: 100%;
   overflow: hidden; }
 
@@ -25,10 +25,10 @@ a {
 h1 {
   line-height: 1.5em;
   font-size: 1.75em;
-  font-weight: 300; }
+  font-weight: 400; }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-weight: 300; }
 
 body > section {
@@ -53,6 +53,7 @@ section#about {
   transform: translateX(-100%);
   background: white;
   opacity: 0;
+  padding: 1em;
   z-index: 100; }
   section#about.active_section {
     -webkit-transform: translateX(0%);
@@ -70,6 +71,7 @@ section#projects {
   transform: translateX(100%);
   background: white;
   opacity: 0;
+  padding: 1em;
   z-index: 100; }
   section#projects.active_section {
     -webkit-transform: translateX(0%);
@@ -87,12 +89,15 @@ section#home {
     -ms-transition: width 0.3s;
     -o-transition: width 0.3s;
     transition: width 0.3s;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
     cursor: pointer;
     float: left;
     height: 100%;
     width: 25%; }
     @media (max-width: 500px) {
       section#home > section {
+        background-size: 100% auto;
         float: none;
         height: 25%;
         width: 100%; } }
@@ -131,6 +136,8 @@ section#home {
       position: absolute;
       top: 0;
       width: 40%; }
+      section#home > section aside h2 {
+        margin-top: 0.5em; }
       section#home > section aside p {
         margin: 1em 0; }
       section#home > section aside .social {
@@ -146,6 +153,7 @@ section#home {
           border: 1px solid white;
           display: inline-block;
           height: 2em;
+          margin: 0 0.25em;
           text-indent: -3000em;
           width: 2em; }
           section#home > section aside .social a::before {
@@ -170,35 +178,49 @@ section#home {
             width: 2em;
             height: 2em;
             margin: 0; }
-  section#home #spencer .overlay {
-    background-color: rgba(223, 47, 51, 0.45);
-    left: 0; }
-  section#home #spencer:hover .overlay {
-    background-color: rgba(223, 47, 51, 0.55); }
-  section#home #eugene .overlay {
-    background-color: rgba(51, 151, 50, 0.45); }
-  section#home #eugene:hover .overlay {
-    background-color: rgba(51, 151, 50, 0.55); }
-  section#home #jon .overlay {
-    background-color: rgba(43, 136, 230, 0.45); }
-  section#home #jon:hover .overlay {
-    background-color: rgba(43, 136, 230, 0.55); }
-  section#home #nick .overlay {
-    background-color: rgba(155, 108, 213, 0.45); }
-  section#home #nick:hover .overlay {
-    background-color: rgba(155, 108, 213, 0.55); }
+  section#home #spencer {
+    background-image: url(../img/eugene.png); }
+    section#home #spencer .overlay {
+      background-color: rgba(223, 47, 51, 0.45);
+      left: 0; }
+    section#home #spencer:hover .overlay {
+      background-color: rgba(223, 47, 51, 0.55); }
+  section#home #eugene {
+    background-image: url(../img/eugene.png); }
+    section#home #eugene .overlay {
+      background-color: rgba(51, 151, 50, 0.45); }
+    section#home #eugene:hover .overlay {
+      background-color: rgba(51, 151, 50, 0.55); }
+  section#home #jon {
+    background-image: url(../img/eugene.png); }
+    section#home #jon .overlay {
+      background-color: rgba(43, 136, 230, 0.45); }
+    section#home #jon:hover .overlay {
+      background-color: rgba(43, 136, 230, 0.55); }
+  section#home #nick {
+    background-image: url(../img/eugene.png); }
+    section#home #nick .overlay {
+      background-color: rgba(155, 108, 213, 0.45); }
+    section#home #nick:hover .overlay {
+      background-color: rgba(155, 108, 213, 0.55); }
 
 nav {
-  position: fixed;
   bottom: 0;
-  left: 50%;
+  display: table;
   height: 20%;
-  margin-left: -12em;
-  width: 24em; }
-  nav ul li {
-    float: left;
-    list-style: none;
-    text-align: center;
-    width: 8em; }
-    nav ul li a.nav_active {
-      color: #fc913a; }
+  left: 50%;
+  margin-left: -12.5em;
+  position: fixed;
+  width: 25em; }
+  nav ul {
+    display: table-cell;
+    vertical-align: middle; }
+    nav ul li {
+      float: left;
+      list-style: none;
+      text-align: center;
+      width: 8em; }
+      nav ul li a {
+        cursor: pointer; }
+        nav ul li a.nav_active {
+          color: #fc913a; }

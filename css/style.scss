@@ -10,11 +10,11 @@
 }
 
 ::selection {
-  background: $red;
+  background: $orange;
 }
 
 ::-moz-selection {
-  background: $red;
+  background: $orange;
 }
 
 html,
@@ -33,11 +33,11 @@ a {
 h1 {
   line-height: 1.5em;
   font-size: 1.75em;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-weight: 300;
 }
 
@@ -56,6 +56,7 @@ section#about {
   @include transform(translateX(-100%));
   background: $white;
   opacity: 0;
+  padding: 1em;
   z-index: 100;
 
   &.active_section {
@@ -68,6 +69,7 @@ section#projects {
   @include transform(translateX(100%));
   background: $white;
   opacity: 0;
+  padding: 1em;
   z-index: 100;
 
   &.active_section {
@@ -81,12 +83,15 @@ section#home {
 
   & > section {
     @include transition(width 0.3s);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
     cursor: pointer;
     float: left;
     height: 100%;
     width: 25%;
 
     @include breakpoint(small) {
+      background-size: 100% auto;
       float: none;
       height: 25%;
       width: 100%;
@@ -130,6 +135,10 @@ section#home {
       top: 0;
       width: 40%;
 
+      h2 {
+        margin-top: 0.5em;
+      }
+
       p {
         margin: 1em 0;
       }
@@ -146,6 +155,7 @@ section#home {
           border: 1px solid $white;
           display: inline-block;
           height: 2em;
+          margin: 0 0.25em;
           text-indent: -3000em;
           width: 2em;
 
@@ -174,6 +184,7 @@ section#home {
   }
 
   #spencer {
+    background-image: url(../img/eugene.png);
 
     .overlay {
       background-color: rgba(223,47,51,.45);
@@ -188,6 +199,7 @@ section#home {
   }
 
   #eugene {
+    background-image: url(../img/eugene.png);
 
     .overlay {
       background-color: rgba(51,151,50,.45);
@@ -201,6 +213,7 @@ section#home {
   }
 
   #jon {
+    background-image: url(../img/eugene.png);
 
     .overlay {
       background-color: rgba(43,136,230,.45);
@@ -214,6 +227,7 @@ section#home {
   }
 
   #nick {
+    background-image: url(../img/eugene.png);
 
     .overlay {
       background-color: rgba(155,108,213,.45);
@@ -228,14 +242,18 @@ section#home {
 }
 
 nav {
-  position: fixed;
   bottom: 0;
-  left: 50%;
+  display: table;
   height: 20%;
-  margin-left: -12em;
-  width: 24em;
+  left: 50%;
+  margin-left: -12.5em;
+  position: fixed;
+  width: 25em;
 
   ul {
+    display: table-cell;
+    vertical-align: middle;
+
     li {
       float: left;
       list-style: none;
@@ -243,6 +261,8 @@ nav {
       width: 8em;
 
       a {
+        cursor: pointer;
+
         &.nav_active {
           color: $orange;
         }

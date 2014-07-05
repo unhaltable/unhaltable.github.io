@@ -11,7 +11,6 @@ for (var i = 0; i < people.length; i++) {
       this.classList.remove('active');
 
       for (var j = 0; j < people.length; j++) {
-        console.log(people[j]);
         people[j].classList.remove('inactive');
       }
     } else {
@@ -22,7 +21,6 @@ for (var i = 0; i < people.length; i++) {
 
       // Collapse others to 20% width
       for (var j = 0; j < people.length; j++) {
-        console.log(people[j]);
         people[j].classList.add('inactive');
       }
 
