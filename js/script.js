@@ -68,14 +68,43 @@ function show_section(elem) {
   }
 }
 
+function active_nav(elem) {
+  switch (elem) {
+    case nav_about:
+      nav_home.classList.remove('nav_active');
+      nav_projects.classList.remove('nav_active');
+      nav_about.classList.add('nav_active');
+      break;
+
+    case nav_home:
+      nav_about.classList.remove('nav_active');
+      nav_projects.classList.remove('nav_active');
+      nav_home.classList.add('nav_active');
+      break;
+
+    case nav_projects:
+      nav_about.classList.remove('nav_active');
+      nav_home.classList.remove('nav_active');
+      nav_projects.classList.add('nav_active');
+      break;
+
+    default:
+      break;
+  }
+
+}
+
 nav_about.onclick = function() {
   show_section(about);
+  active_nav(this);
 }
 
 nav_home.onclick = function() {
   show_section(home);
+  active_nav(this);
 }
 
 nav_projects.onclick = function() {
   show_section(projects);
+  active_nav(this);
 }

@@ -148,3 +148,5 @@ nav {
     list-style: none;
     text-align: center;
     width: 8em; }
+    nav ul li a.nav_active {
+      color: #fc913a; }
