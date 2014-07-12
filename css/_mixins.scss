@@ -38,6 +38,14 @@
           transform-origin: $value;
 }
 
+@mixin filter($value...) {
+  -webkit-filter: $value;
+     -moz-filter: $value;
+      -ms-filter: $value;
+       -o-filter: $value;
+          filter: $value;
+}
+
 $breakpoints: (
   'tiny':   ( max-width:  360px ),
   'small':  ( max-width:  500px ),

@@ -50,13 +50,19 @@ body > section {
   overflow: hidden;
   position: absolute;
   width: 100%;
+
+  section.content {
+    background: $white;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1em;
+    width: 80%;
+  }
 }
 
 section#about {
   @include transform(translateX(-100%));
-  background: $white;
   opacity: 0;
-  padding: 1em;
   z-index: 100;
 
   &.active_section {
@@ -67,9 +73,7 @@ section#about {
 
 section#projects {
   @include transform(translateX(100%));
-  background: $white;
   opacity: 0;
-  padding: 1em;
   z-index: 100;
 
   &.active_section {
@@ -279,6 +283,12 @@ section#home {
       }
     }
   }
+}
+
+.blur section#home {
+  @include filter(blur(10px));
+  @include transform(translateZ(0));
+  @include transition(all 0.3s);
 }
 
 nav {

@@ -44,18 +44,21 @@ var projects = document.getElementById('projects');
 function show_section(elem) {
   switch (elem) {
     case about:
+      document.body.classList.add('blur');
       home.classList.remove('active_section');
       projects.classList.remove('active_section');
       about.classList.add('active_section');
       break;
 
     case home:
+      document.body.classList.remove('blur');
       about.classList.remove('active_section');
       projects.classList.remove('active_section');
       home.classList.add('active_section');
       break;
 
     case projects:
+      document.body.classList.add('blur');
       about.classList.remove('active_section');
       home.classList.remove('active_section');
       projects.classList.add('active_section');

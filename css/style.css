@@ -44,6 +44,12 @@ body > section {
   overflow: hidden;
   position: absolute;
   width: 100%; }
+  body > section section.content {
+    background: white;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1em;
+    width: 80%; }
 
 section#about {
   -webkit-transform: translateX(-100%);
@@ -51,9 +57,7 @@ section#about {
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
   transform: translateX(-100%);
-  background: white;
   opacity: 0;
-  padding: 1em;
   z-index: 100; }
   section#about.active_section {
     -webkit-transform: translateX(0%);
@@ -69,9 +73,7 @@ section#projects {
   -ms-transform: translateX(100%);
   -o-transform: translateX(100%);
   transform: translateX(100%);
-  background: white;
   opacity: 0;
-  padding: 1em;
   z-index: 100; }
   section#projects.active_section {
     -webkit-transform: translateX(0%);
@@ -226,6 +228,23 @@ section#home {
       background-color: rgba(155, 108, 213, 0.45); }
     section#home #nick:hover .overlay {
       background-color: rgba(155, 108, 213, 0.55); }
+
+.blur section#home {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  -o-filter: blur(10px);
+  filter: blur(10px); }
 
 nav {
   bottom: 0;
