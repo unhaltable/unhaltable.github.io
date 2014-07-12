@@ -152,12 +152,11 @@ section#home {
           -webkit-border-radius: 50%;
           -moz-border-radius: 50%;
           border-radius: 50%;
-          background-repeat: no-repeat;
-          background-size: 2em 2em;
           border: 1px solid white;
           display: inline-block;
           height: 2em;
           margin: 0 0.25em;
+          position: relative;
           text-indent: -3000em;
           width: 2em;
           z-index: 10; }
@@ -171,9 +170,6 @@ section#home {
             -o-transition: width 0.3s, height 0.3s, margin 0.3s;
             transition: width 0.3s, height 0.3s, margin 0.3s;
             background-color: #ccc;
-            background-repeat: no-repeat;
-            background-size: 2em 2em;
-            background-origin: center center;
             content: ' ';
             display: block;
             height: 0;
@@ -183,26 +179,28 @@ section#home {
             top: -1px;
             width: 0;
             z-index: 0; }
+          section#home > section aside .social a::after {
+            background-repeat: no-repeat;
+            background-size: 2em 2em;
+            content: ' ';
+            display: block;
+            height: 2em;
+            left: -1px;
+            position: absolute;
+            top: -1px;
+            width: 2em; }
           section#home > section aside .social a:hover::before {
             width: 2em;
             height: 2em;
             margin: 0; }
-          section#home > section aside .social a.twitter {
-            background-image: url(../img/twitter@2x.png); }
-            section#home > section aside .social a.twitter::before {
-              background-image: url(../img/twitter@2x_hover.png); }
-          section#home > section aside .social a.github {
-            background-image: url(../img/twitter@2x.png); }
-            section#home > section aside .social a.github:hover {
-              background-image: url(../img/twitter@2x_hover.png); }
-          section#home > section aside .social a.email {
-            background-image: url(../img/twitter@2x.png); }
-            section#home > section aside .social a.email:hover {
-              background-image: url(../img/twitter@2x_hover.png); }
-          section#home > section aside .social a.website {
-            background-image: url(../img/twitter@2x.png); }
-            section#home > section aside .social a.website:hover {
-              background-image: url(../img/twitter@2x_hover.png); }
+          section#home > section aside .social a.twitter::after {
+            background-image: url(../img/twitter@2x_hover.png); }
+          section#home > section aside .social a.github::after {
+            background-image: url(../img/twitter@2x_hover.png); }
+          section#home > section aside .social a.email::after {
+            background-image: url(../img/twitter@2x_hover.png); }
+          section#home > section aside .social a.website::after {
+            background-image: url(../img/twitter@2x_hover.png); }
   section#home #spencer {
     background-image: url(../img/spencer.jpg); }
     section#home #spencer .overlay {

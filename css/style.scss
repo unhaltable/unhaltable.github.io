@@ -156,12 +156,11 @@ section#home {
 
         a {
           @include border-radius(50%);
-          background-repeat: no-repeat;
-          background-size: 2em 2em;
           border: 1px solid $white;
           display: inline-block;
           height: 2em;
           margin: 0 0.25em;
+          position: relative;
           text-indent: -3000em;
           width: 2em;
           z-index: 10;
@@ -170,9 +169,6 @@ section#home {
             @include border-radius(50%);
             @include transition(width 0.3s, height 0.3s, margin 0.3s);
             background-color: #ccc;
-            background-repeat: no-repeat;
-            background-size: 2em 2em;
-            background-origin: center center;
             content: ' ';
             display: block;
             height: 0;
@@ -184,6 +180,18 @@ section#home {
             z-index: 0;
           }
 
+          &::after {
+            background-repeat: no-repeat;
+            background-size: 2em 2em;
+            content: ' ';
+            display: block;
+            height: 2em;
+            left: -1px;
+            position: absolute;
+            top: -1px;
+            width: 2em;
+          }
+
           &:hover::before {
             width: 2em;
             height: 2em;
@@ -191,37 +199,28 @@ section#home {
           }
 
           &.twitter {
-            background-image: url(../img/twitter@2x.png);
-
-            &::before {
+            &::after {
               background-image: url(../img/twitter@2x_hover.png);
             }
           }
 
           &.github {
-            background-image: url(../img/twitter@2x.png);
-
-            &:hover {
+            &::after {
               background-image: url(../img/twitter@2x_hover.png);
             }
           }
 
           &.email {
-            background-image: url(../img/twitter@2x.png);
-
-            &:hover {
+            &::after {
               background-image: url(../img/twitter@2x_hover.png);
             }
           }
 
           &.website {
-            background-image: url(../img/twitter@2x.png);
-
-            &:hover {
+            &::after {
               background-image: url(../img/twitter@2x_hover.png);
             }
           }
-
         }
       }
     }
