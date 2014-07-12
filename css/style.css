@@ -230,21 +230,21 @@ section#home {
       background-color: rgba(155, 108, 213, 0.55); }
 
 .blur section#home {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  -o-filter: blur(10px);
+  filter: blur(10px);
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-filter: blur(10px);
-  -moz-filter: blur(10px);
-  -ms-filter: blur(10px);
-  -o-filter: blur(10px);
-  filter: blur(10px); }
+  -webkit-transition: all 0.3s ease-out 0.3s;
+  -moz-transition: all 0.3s ease-out 0.3s;
+  -ms-transition: all 0.3s ease-out 0.3s;
+  -o-transition: all 0.3s ease-out 0.3s;
+  transition: all 0.3s ease-out 0.3s; }
 
 nav {
   bottom: 0;

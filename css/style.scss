@@ -288,7 +288,7 @@ section#home {
 .blur section#home {
   @include filter(blur(10px));
   @include transform(translateZ(0));
-  @include transition(all 0.3s);
+  @include transition(all 0.3s ease-out 0.3s);
 }
 
 nav {
