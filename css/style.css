@@ -84,6 +84,11 @@ section#projects {
     opacity: 1; }
 
 section#home {
+  -webkit-transition: all 0.3s linear 0.3s;
+  -moz-transition: all 0.3s linear 0.3s;
+  -ms-transition: all 0.3s linear 0.3s;
+  -o-transition: all 0.3s linear 0.3s;
+  transition: all 0.3s linear 0.3s;
   color: white; }
   section#home > section {
     -webkit-transition: width 0.3s;
@@ -169,7 +174,7 @@ section#home {
             -ms-transition: width 0.3s, height 0.3s, margin 0.3s;
             -o-transition: width 0.3s, height 0.3s, margin 0.3s;
             transition: width 0.3s, height 0.3s, margin 0.3s;
-            background-color: #ccc;
+            background-color: white;
             content: ' ';
             display: block;
             height: 0;
@@ -180,26 +185,39 @@ section#home {
             width: 0;
             z-index: 0; }
           section#home > section aside .social a::after {
+            -webkit-transition: background-image 0.3s;
+            -moz-transition: background-image 0.3s;
+            -ms-transition: background-image 0.3s;
+            -o-transition: background-image 0.3s;
+            transition: background-image 0.3s;
             background-repeat: no-repeat;
-            background-size: 2em 2em;
+            background-size: 1.5em 1.5em;
             content: ' ';
             display: block;
-            height: 2em;
-            left: -1px;
+            height: 1.5em;
+            left: 4px;
             position: absolute;
-            top: -1px;
-            width: 2em; }
+            top: 4px;
+            width: 1.5em; }
           section#home > section aside .social a:hover::before {
             width: 2em;
             height: 2em;
             margin: 0; }
           section#home > section aside .social a.twitter::after {
+            background-image: url(../img/twitter@2x.png); }
+          section#home > section aside .social a.twitter:hover::after {
             background-image: url(../img/twitter@2x_hover.png); }
           section#home > section aside .social a.github::after {
+            background-image: url(../img/twitter@2x.png); }
+          section#home > section aside .social a.github:hover::after {
             background-image: url(../img/twitter@2x_hover.png); }
           section#home > section aside .social a.email::after {
+            background-image: url(../img/twitter@2x.png); }
+          section#home > section aside .social a.email:hover::after {
             background-image: url(../img/twitter@2x_hover.png); }
           section#home > section aside .social a.website::after {
+            background-image: url(../img/twitter@2x.png); }
+          section#home > section aside .social a.website:hover::after {
             background-image: url(../img/twitter@2x_hover.png); }
   section#home #spencer {
     background-image: url(../img/spencer.jpg); }
@@ -237,12 +255,7 @@ section#home {
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-transition: all 0.3s ease-out 0.3s;
-  -moz-transition: all 0.3s ease-out 0.3s;
-  -ms-transition: all 0.3s ease-out 0.3s;
-  -o-transition: all 0.3s ease-out 0.3s;
-  transition: all 0.3s ease-out 0.3s; }
+  transform: translateZ(0); }
 
 nav {
   bottom: 0;

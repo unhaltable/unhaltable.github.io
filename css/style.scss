@@ -83,6 +83,7 @@ section#projects {
 }
 
 section#home {
+  @include transition(all 0.3s linear 0.3s);
   color: $white;
 
   & > section {
@@ -168,7 +169,7 @@ section#home {
           &::before {
             @include border-radius(50%);
             @include transition(width 0.3s, height 0.3s, margin 0.3s);
-            background-color: #ccc;
+            background-color: $white;
             content: ' ';
             display: block;
             height: 0;
@@ -181,15 +182,16 @@ section#home {
           }
 
           &::after {
+            @include transition(background-image 0.3s);
             background-repeat: no-repeat;
-            background-size: 2em 2em;
+            background-size: 1.5em 1.5em;
             content: ' ';
             display: block;
-            height: 2em;
-            left: -1px;
+            height: 1.5em;
+            left: 4px;
             position: absolute;
-            top: -1px;
-            width: 2em;
+            top: 4px;
+            width: 1.5em;
           }
 
           &:hover::before {
@@ -200,24 +202,40 @@ section#home {
 
           &.twitter {
             &::after {
+              background-image: url(../img/twitter@2x.png);
+            }
+
+            &:hover::after {
               background-image: url(../img/twitter@2x_hover.png);
             }
           }
 
           &.github {
             &::after {
+              background-image: url(../img/twitter@2x.png);
+            }
+
+            &:hover::after {
               background-image: url(../img/twitter@2x_hover.png);
             }
           }
 
           &.email {
             &::after {
+              background-image: url(../img/twitter@2x.png);
+            }
+
+            &:hover::after {
               background-image: url(../img/twitter@2x_hover.png);
             }
           }
 
           &.website {
             &::after {
+              background-image: url(../img/twitter@2x.png);
+            }
+
+            &:hover::after {
               background-image: url(../img/twitter@2x_hover.png);
             }
           }
@@ -287,7 +305,6 @@ section#home {
 .blur section#home {
   @include filter(blur(10px));
   @include transform(translateZ(0));
-  @include transition(all 0.3s ease-out 0.3s);
 }
 
 nav {
