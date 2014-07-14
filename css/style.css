@@ -97,14 +97,13 @@ section#home {
     -o-transition: width 0.3s;
     transition: width 0.3s;
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
     cursor: pointer;
     float: left;
     height: 100%;
     width: 25%; }
     @media (max-width: 500px) {
       section#home > section {
-        background-size: 100% auto;
         float: none;
         height: 25%;
         width: 100%; } }
@@ -114,6 +113,7 @@ section#home {
       -ms-transition: width 0.3s, background-color 0.3s;
       -o-transition: width 0.3s, background-color 0.3s;
       transition: width 0.3s, background-color 0.3s;
+      background-image: url(../img/overlay.png);
       height: 100%;
       float: left;
       width: 100%; }
@@ -146,6 +146,7 @@ section#home {
       section#home > section aside h2 {
         margin-top: 0.5em; }
       section#home > section aside p {
+        line-height: 1.5em;
         margin: 1em 0; }
       section#home > section aside .social {
         bottom: 1em;
@@ -191,34 +192,34 @@ section#home {
             -o-transition: background-image 0.3s;
             transition: background-image 0.3s;
             background-repeat: no-repeat;
-            background-size: 1.5em 1.5em;
+            background-size: 1.25em 1.25em;
             content: ' ';
             display: block;
-            height: 1.5em;
-            left: 4px;
+            height: 1.25em;
+            left: 5px;
             position: absolute;
-            top: 4px;
-            width: 1.5em; }
+            top: 5px;
+            width: 1.25em; }
           section#home > section aside .social a:hover::before {
             width: 2em;
             height: 2em;
             margin: 0; }
           section#home > section aside .social a.twitter::after {
-            background-image: url(../img/twitter@2x.png); }
+            background-image: url(../img/twitter.png); }
           section#home > section aside .social a.twitter:hover::after {
-            background-image: url(../img/twitter@2x_hover.png); }
+            background-image: url(../img/twitter_hover.png); }
           section#home > section aside .social a.github::after {
-            background-image: url(../img/twitter@2x.png); }
+            background-image: url(../img/github.png); }
           section#home > section aside .social a.github:hover::after {
-            background-image: url(../img/twitter@2x_hover.png); }
+            background-image: url(../img/github_hover.png); }
           section#home > section aside .social a.email::after {
-            background-image: url(../img/twitter@2x.png); }
+            background-image: url(../img/email.png); }
           section#home > section aside .social a.email:hover::after {
-            background-image: url(../img/twitter@2x_hover.png); }
+            background-image: url(../img/email_hover.png); }
           section#home > section aside .social a.website::after {
-            background-image: url(../img/twitter@2x.png); }
+            background-image: url(../img/website.png); }
           section#home > section aside .social a.website:hover::after {
-            background-image: url(../img/twitter@2x_hover.png); }
+            background-image: url(../img/website_hover.png); }
   section#home #spencer {
     background-image: url(../img/spencer.jpg); }
     section#home #spencer .overlay {

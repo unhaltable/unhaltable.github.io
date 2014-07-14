@@ -89,14 +89,13 @@ section#home {
   & > section {
     @include transition(width 0.3s);
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
     cursor: pointer;
     float: left;
     height: 100%;
     width: 25%;
 
     @include breakpoint(small) {
-      background-size: 100% auto;
       float: none;
       height: 25%;
       width: 100%;
@@ -104,6 +103,7 @@ section#home {
 
     .overlay {
       @include transition(width 0.3s, background-color 0.3s);
+      background-image: url(../img/overlay.png);
       height: 100%;
       float: left;
       width: 100%;
@@ -145,6 +145,7 @@ section#home {
       }
 
       p {
+        line-height: 1.5em;
         margin: 1em 0;
       }
 
@@ -184,14 +185,14 @@ section#home {
           &::after {
             @include transition(background-image 0.3s);
             background-repeat: no-repeat;
-            background-size: 1.5em 1.5em;
+            background-size: 1.25em 1.25em;
             content: ' ';
             display: block;
-            height: 1.5em;
-            left: 4px;
+            height: 1.25em;
+            left: 5px;
             position: absolute;
-            top: 4px;
-            width: 1.5em;
+            top: 5px;
+            width: 1.25em;
           }
 
           &:hover::before {
@@ -202,41 +203,41 @@ section#home {
 
           &.twitter {
             &::after {
-              background-image: url(../img/twitter@2x.png);
+              background-image: url(../img/twitter.png);
             }
 
             &:hover::after {
-              background-image: url(../img/twitter@2x_hover.png);
+              background-image: url(../img/twitter_hover.png);
             }
           }
 
           &.github {
             &::after {
-              background-image: url(../img/twitter@2x.png);
+              background-image: url(../img/github.png);
             }
 
             &:hover::after {
-              background-image: url(../img/twitter@2x_hover.png);
+              background-image: url(../img/github_hover.png);
             }
           }
 
           &.email {
             &::after {
-              background-image: url(../img/twitter@2x.png);
+              background-image: url(../img/email.png);
             }
 
             &:hover::after {
-              background-image: url(../img/twitter@2x_hover.png);
+              background-image: url(../img/email_hover.png);
             }
           }
 
           &.website {
             &::after {
-              background-image: url(../img/twitter@2x.png);
+              background-image: url(../img/website.png);
             }
 
             &:hover::after {
-              background-image: url(../img/twitter@2x_hover.png);
+              background-image: url(../img/website_hover.png);
             }
           }
         }
