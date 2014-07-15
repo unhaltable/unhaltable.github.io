@@ -69,6 +69,23 @@ section#about {
   section#about h2 {
     margin-bottom: 1em;
     margin-top: 2em; }
+  section#about h3 {
+    font-weight: 300;
+    margin-top: 1em;
+    margin-bottom: 0.5em; }
+  section#about h4 {
+    margin-bottom: 0.5em; }
+  section#about section.social {
+    margin-top: 0.5em; }
+  section#about a {
+    color: #fc913a; }
+    section#about a::after {
+      color: #222222;
+      content: '-';
+      margin: 0 0.5em; }
+    section#about a:last-child::after {
+      content: '';
+      margin: 0; }
 
 section#projects {
   -webkit-transform: translateX(100%);

@@ -135,8 +135,8 @@ nav_projects.onclick = function() {
 }
 
 // Left and right arrow keys
-document.onkeydown = function(event) {
-  var e = event || window.event;
+document.onkeydown = function(e) {
+  var e = e || window.event;
 
   // Left
   if (e.keyCode == '37') {
