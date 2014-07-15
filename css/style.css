@@ -66,6 +66,9 @@ section#about {
     -o-transform: translateX(0%);
     transform: translateX(0%);
     opacity: 1; }
+  section#about h2 {
+    margin-bottom: 1em;
+    margin-top: 2em; }
 
 section#projects {
   -webkit-transform: translateX(100%);
@@ -87,8 +90,8 @@ section#projects {
     section#projects .content h1 {
       margin-bottom: 0.5em; }
     section#projects .content article {
-      background: #eee;
-      border: 1px solid #777;
+      background: #e1e1e1;
+      border: 1px solid #222222;
       display: block;
       height: 250px;
       width: 100%; }
@@ -102,14 +105,22 @@ section#projects {
         height: 100%;
         overflow-y: auto;
         padding: 1em; }
+        section#projects .content article aside h2 {
+          font-size: 1.5em; }
         section#projects .content article aside a {
-          color: #fc913a; }
+          color: #fc913a;
+          display: block;
+          margin: 0.75em 0; }
+        section#projects .content article aside p {
+          font-size: 0.9em;
+          font-weight: 300;
+          line-height: 1.25em; }
+          section#projects .content article aside p + p {
+            margin-top: 0.5em; }
       section#projects .content article:nth-child(even) img {
-        float: left;
-        margin-right: 1em; }
+        float: left; }
       section#projects .content article:nth-child(odd) img {
-        float: right;
-        margin-left: 1em; }
+        float: right; }
 
 section#home {
   -webkit-transition: all 0.3s ease-in-out 0.3s;
