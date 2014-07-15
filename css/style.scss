@@ -80,10 +80,31 @@ section#projects {
     @include transform(translateX(0%));
     opacity: 1;
   }
+
+  h1 {
+    margin-bottom: 0.5em;
+  }
+
+  article {
+    background: #eee;
+    border: 1px solid #777;
+    display: block;
+    float: left;
+    height: 25%;
+    width: 25%;
+
+    img {
+
+    }
+
+    span {
+
+    }
+  }
 }
 
 section#home {
-  @include transition(all 0.3s linear 0.3s);
+  @include transition(all 0.3s ease-in-out 0.3s);
   color: $white;
 
   & > section {

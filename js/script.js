@@ -1,4 +1,5 @@
 /* Handle the expansion of the people panes. */
+
 var people = document.getElementById('home').children;
 
 for (var i = 0; i < people.length; i++) {
@@ -33,6 +34,10 @@ for (var i = 0; i < people.length; i++) {
 
 
 /* Handle the nav links. */
+
+//A variable to keep track of what page we're on. (0-2)
+var page = 1;
+
 var nav_about    = document.getElementById('nav_about');
 var nav_home     = document.getElementById('nav_home');
 var nav_projects = document.getElementById('nav_projects');
@@ -92,20 +97,55 @@ function active_nav(elem) {
     default:
       break;
   }
-
 }
 
+function nav(page) {
+  switch (page) {
+    case 0:
+      show_section(about);
+      active_nav(nav_about);
+      break;
+
+    case 1:
+      show_section(home);
+      active_nav(nav_home);
+      break;
+
+    case 2:
+      show_section(projects);
+      active_nav(nav_projects);
+      break;
+  }
+}
+
+// The nav links
 nav_about.onclick = function() {
-  show_section(about);
-  active_nav(this);
+  page = 0;
+  nav(page);
 }
 
 nav_home.onclick = function() {
-  show_section(home);
-  active_nav(this);
+  page = 1;
+  nav(page);
 }
 
 nav_projects.onclick = function() {
-  show_section(projects);
-  active_nav(this);
+  page = 2;
+  nav(page);
+}
+
+// Left and right arrow keys
+document.onkeydown = function(event) {
+  var e = event || window.event;
+
+  // Left
+  if (e.keyCode == '37') {
+    page = (page - 1 >= 0) ? page - 1 : 0;
+  }
+  // Right
+  else if (e.keyCode == '39') {
+    page = (page + 1 <= 2) ? page + 1 : 2;
+  }
+
+  nav(page);
 }

@@ -14,7 +14,7 @@
 html,
 body {
   background: #303030;
-  font: 16px/18px "Open Sans", "Helvetica Neue", "Helvetica" sans-serif;
+  font: 16px/18px "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
   height: 100%;
   overflow: hidden; }
 
@@ -82,13 +82,22 @@ section#projects {
     -o-transform: translateX(0%);
     transform: translateX(0%);
     opacity: 1; }
+  section#projects h1 {
+    margin-bottom: 0.5em; }
+  section#projects article {
+    background: #eee;
+    border: 1px solid #777;
+    display: block;
+    float: left;
+    height: 25%;
+    width: 25%; }
 
 section#home {
-  -webkit-transition: all 0.3s linear 0.3s;
-  -moz-transition: all 0.3s linear 0.3s;
-  -ms-transition: all 0.3s linear 0.3s;
-  -o-transition: all 0.3s linear 0.3s;
-  transition: all 0.3s linear 0.3s;
+  -webkit-transition: all 0.3s ease-in-out 0.3s;
+  -moz-transition: all 0.3s ease-in-out 0.3s;
+  -ms-transition: all 0.3s ease-in-out 0.3s;
+  -o-transition: all 0.3s ease-in-out 0.3s;
+  transition: all 0.3s ease-in-out 0.3s;
   color: white; }
   section#home > section {
     -webkit-transition: width 0.3s;
