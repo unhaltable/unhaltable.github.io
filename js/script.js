@@ -140,11 +140,11 @@ document.onkeydown = function(e) {
 
   // Left
   if (e.keyCode == '37') {
-    page = (page - 1 >= 0) ? page - 1 : 0;
+    page = (page - 1 >= 0) ? page - 1 : 2;
   }
   // Right
   else if (e.keyCode == '39') {
-    page = (page + 1 <= 2) ? page + 1 : 2;
+    page = (page + 1 < 2) ? page + 1 : 0;
   }
 
   nav(page);
