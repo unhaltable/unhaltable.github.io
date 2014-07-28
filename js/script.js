@@ -144,7 +144,7 @@ document.onkeydown = function(e) {
   }
   // Right
   else if (e.keyCode == '39') {
-    page = (page + 1 < 2) ? page + 1 : 0;
+    page = (page + 1 <= 2) ? page + 1 : 0;
   }
 
   nav(page);
