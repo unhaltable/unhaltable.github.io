@@ -70,19 +70,26 @@ section#about {
     opacity: 1;
   }
 
+  .extras {
+    margin-top: 2.5em;
+
+    & > section {
+      border-bottom: 1px solid #999;
+      border-top: 1px solid #999;
+      margin: 1em 0;
+      padding: 1em 0;
+    }
+  }
+
   h2 {
-    margin-bottom: 1em;
-    margin-top: 2em;
+    font-weight: 400;
   }
 
   h3 {
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-  }
-
-  h4 {
+    font-size: 0.9em;
     font-weight: 300;
-    margin-bottom: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   section.social {
@@ -312,6 +319,16 @@ section#home {
 
             &:hover::after {
               background-image: url(../img/twitter_hover.png);
+            }
+          }
+
+          &.linkedin {
+            &::after {
+              background-image: url(../img/linkedin.png);
+            }
+
+            &:hover::after {
+              background-image: url(../img/linkedin_hover.png);
             }
           }
 
