@@ -1,6 +1,6 @@
 unhaltable.github.io
 ====================
 
-A website to showcase team members and past hacks with fancy transitions and stuff.
+Official website for the University of Toronto Unhaltable Hackers club, built with [Harp](http://harpjs.com/).
 
-You can check it out live at [unhaltable.com](http://unhaltable.com).
+Check it out live at [unhaltable.com](http://unhaltable.com)!
