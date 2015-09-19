@@ -1,3 +1,6 @@
+$primary: #818d9e;
+$white: #fff;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,6 +22,7 @@ html {
     right: 0;
     top: 0;
     width: 100%;
+    will-change: transform;
     z-index: -1;
   }
 
@@ -36,37 +40,48 @@ body {
   color: #444;
   font-family: 'Hack', 'Consolas', monospace;
   height: 100%;
-  margin: 0;
 }
 
-h1 {
-  font-size: 5em;
+h1,
+h2,
+h3 {
   font-weight: 300;
-  line-height: 1;
 }
 
-header {
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 1em;
+}
+
+.home__header {
   align-items: center;
-  color: #818d9e;
+  color: $primary;
   display: flex;
   height: 100%;
 }
 
-.title--carousel {
-  display: inline-block;
-  height: 1em;
-  line-height: 0;
-  overflow: hidden;
-  text-align: left;
-
-  p {
-    animation: text-carousel 4s cubic-bezier(.75,.01,.45,.98) 0.5s forwards;
+  .home__header__title {
+    font-size: 5em;
+    font-weight: 300;
     line-height: 1;
-    margin-top: 0.15em;
   }
-}
 
-@keyframes text-carousel {
+    .home__header__title--carousel {
+      display: inline-block;
+      height: 1em;
+      line-height: 0;
+      overflow: hidden;
+      text-align: left;
+
+      p {
+        animation: anim-text-carousel 4s cubic-bezier(.75,.01,.45,.98) 0.5s forwards;
+        line-height: 1;
+        margin-top: 0.15em;
+      }
+    }
+
+@keyframes anim-text-carousel {
   @for $i from 1 through 9 {
     #{$i * 10}% {
       transform: translateY(-#{$i + ($i * 0.15)}em);
@@ -78,12 +93,15 @@ header {
   }
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 1000px;
-  padding: 1em;
+.home__content {
+  background: $white;
 }
 
-main {
-  background: #fff;
+.home__footer {
+  background: $primary;
+  color: $white;
+
+  a {
+    color: $white;
+  }
 }
