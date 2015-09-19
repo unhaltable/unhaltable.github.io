@@ -5,13 +5,37 @@
 }
 
 html {
-  background: #f4f4f7 url('img/overlay.png');
+  background: #d5d5d5;
+  height: 100%;
+
+  &::before,
+  &::after {
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &::before {
+    background: url('img/bg.jpg') no-repeat center center / cover;
+    opacity: 0.5;
+  }
+
+  &::after {
+    background: url('img/overlay.png');
+  }
 }
 
 body {
-  font-family: 'Hack', monospace;
-  padding: 50px 20px 0;
   color: #444;
+  font-family: 'Hack', 'Consolas', monospace;
+  height: 100%;
   margin: 0;
 }
 
@@ -19,6 +43,13 @@ h1 {
   font-size: 5em;
   font-weight: 300;
   line-height: 1;
+}
+
+header {
+  align-items: center;
+  color: #818d9e;
+  display: flex;
+  height: 100%;
 }
 
 .title--carousel {
@@ -29,7 +60,7 @@ h1 {
   text-align: left;
 
   p {
-    animation: text-carousel 4s 0.5s forwards;
+    animation: text-carousel 4s cubic-bezier(.75,.01,.45,.98) 0.5s forwards;
     line-height: 1;
     margin-top: 0.15em;
   }
@@ -43,5 +74,16 @@ h1 {
   }
   100% {
     transform: translateY(-10.35em);
+    width: 6em;
   }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 1em;
+}
+
+main {
+  background: #fff;
 }
