@@ -37,6 +37,10 @@ body {
   color: #444;
   font: 400 14px/1.5 'Hack', 'Consolas', monospace;
   overflow: hidden;
+
+  @include mobile {
+    overflow: auto;
+  }
 }
 
 h1,
