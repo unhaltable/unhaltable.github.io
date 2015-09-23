@@ -38,7 +38,7 @@ body {
   font: 400 14px/1.5 'Hack', 'Consolas', monospace;
   overflow: hidden;
 
-  @include mobile {
+  @include breakpoint(mobile) {
     overflow: auto;
   }
 }
@@ -70,3 +70,4 @@ ul {
     display: inline-block;
     margin-right: 1rem;
   }
+  
