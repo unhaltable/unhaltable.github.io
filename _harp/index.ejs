@@ -33,7 +33,10 @@
 
         <p>Stay up to date with upcoming workshops, hackathons, socials, and more!</p>
         <ul>
-          <li><a href="http://www.uofthacks.com/">UoftHacks III</a></li>
+          <% for (var i in public._data.events.items) { %>
+            <% var item = public._data.events.items[i] %>
+            <li><a href="<%= item.url %>"><%= item.title %></a> [<%= item.date %>]</li>
+          <% } %>
         </ul>
       </section>
 
@@ -42,10 +45,10 @@
 
         <p>Check out some of the things our members have created:</p>
         <ul>
-          <li><a href="http://exemplary.unhaltable.com/">Exemplary</a></li>
-          <li><a href="http://txti.unhaltable.com/">Txti</a></li>
-          <li><a href="http://ultraviolet.unhaltable.com/">Ultraviolet</a></li>
-          <li><a href="http://cryptr.unhaltable.com/">Cryptr</a></li>
+          <% for (var i in public._data.portfolio.items) { %>
+            <% var item = public._data.portfolio.items[i] %>
+            <li><a href="<%= item.url %>"><%= item.title %></a></li>
+          <% } %>
         </ul>
 
         <p>See more in our <a href="https://github.com/unhaltable">GitHub organization</a>.</p>
