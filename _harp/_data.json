@@ -16,22 +16,6 @@
   },
 
   "events": {
-    "items": [{
-      "title": "The First Jam",
-      "date": "2015-09-26 - 2015-09-27",
-      "url": "https://www.facebook.com/events/743736819106265/"
-    }, {
-      "title": "CSSU Hack Night",
-      "date": "2015-10-02",
-      "url": "https://www.facebook.com/events/900341646679779/"
-    }, {
-      "title": "HackHarvard",
-      "date": "2015-11-13 - 2015-11-15",
-      "url": "http://hackharvard.org/"
-    }, {
-      "title": "UofTHacks III",
-      "date": "Q1 2016",
-      "url": "http://www.uofthacks.com/"
-    }]
+    "items": []
   }
 }
